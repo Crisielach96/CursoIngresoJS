@@ -18,6 +18,8 @@ function CalcularPrecio ()
 	marca=document.getElementById("Marca").value
 	lamparitas=document.getElementById("Cantidad").value
 	lamparitas=parseInt(lamparitas)
+ 	resultadoFinal=parseInt(resultadoFinal)
+ 	resultadoFinal2=parseInt(resultadoFinal2)
  	resultado=+lamparitas*35
 	if(lamparitas>=6)
 	{
@@ -59,26 +61,27 @@ function CalcularPrecio ()
 			resultado=+resultado-(resultado*0.15)
  			resultadoFinal=resultado
  		}
-		else
-		{
-			if(lamparitas==3 && marca=="FelipeLamparas")
-			{
-				resultado=+resultado-(resultado*0.10)
-				resultadoFinal=resultado
-			}
-					{
-					else
-						
-						if(lamparitas==3)
+			else if(lamparitas==3 && marca=="FelipeLamparas")
+				{
+					resultado=+resultado-(resultado*0.10)
+					resultadoFinal=resultado
+				}
+				else if(lamparitas==3 && marca!="ArgentinaLuz" && marca!="FelipeLamparas")
 	 					{
 	 						resultado=+resultado-(resultado*0.05)
  							resultadoFinal=resultado
  						}
-					}
+					
 				
- 				if(resultadoFinal>120){
- 		resultadoFinal=+resultadoFinal*1.10
- 		alert("IIBB Usted pago "+resultadoFinal)
- 	document.getElementById("precioDescuento").value=resultadoFinal;
+ 		if(resultadoFinal>120)
+ 		{
+ 			resultadoFinal=+resultadoFinal*1.10
+ 		}
+ 	lamparitas=parseInt(lamparitas)
+	resultadoFinal=parseInt(resultadoFinal)
+	resultadoFinal2=parseInt(resultadoFinal2)
+ 	alert("IIBB Usted pago "+resultadoFinal)
+	 document.getElementById("precioDescuento").value=resultadoFinal;
+
 }
 

@@ -7,6 +7,7 @@ function comenzar()
 {
 	//Genero el número RANDOM entre 1 y 3
 	 	numeroSecreto =Math.floor( Math.random()*3)+1;
+	 	console.log(numeroSecreto)
 		//alert(numeroSecreto);
 		switch(numeroSecreto)
 		{
