@@ -1,17 +1,40 @@
 function Mostrar()
 {
 
-	var contador=0;
 	// declarar variables
-	
-	var respuesta='si';
+	var min
+	var max
+	var num
+	var respuesta=true;
+	var primera=true
 
-	while(respuesta!='no')
+	while(respuesta)
 	{
+		num=prompt("Ingrese un numero")
+		num=parseInt(num)
 		
-	
+		if (primera)
+		{
+			max=num
+			min=num
+			primera=false
+		}
+			else
+			{
+				if (num>max) 
+				{
+					max=num
+				}
+					if (num<min)
+					{
+		 				min=num
+		 			}
+			}		
+		respuesta=confirm("¿Quiere seguir?")
 	}
 
+document.getElementById('minimo').value=min
+document.getElementById("maximo").value=max
 
 
 
