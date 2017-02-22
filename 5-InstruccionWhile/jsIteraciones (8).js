@@ -4,7 +4,7 @@ function Mostrar()
 	var contador=0;
 	var contador2=0
 	var positivo=0;
-	var negativo=0;
+	var negativo=1;
 	var respuesta='si';   
 	var acumulador=0 
 	var acumulador2=1
@@ -17,14 +17,16 @@ while(respuesta)
 			numero=parseInt(numero)
 			acumulador+=numero
 			contador++
+			positivo++
 		}
 		else
 		{
 			numero=parseInt(numero)
 			acumulador2*=numero
 			contador++
+			negativo++
 		}
-
+		
 		respuesta=confirm("¿Quiere continuar?")
 
 	}

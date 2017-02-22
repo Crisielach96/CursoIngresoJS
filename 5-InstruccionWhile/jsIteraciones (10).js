@@ -15,26 +15,28 @@ function Mostrar()
 	while(respuesta)
 	{
 		numero=prompt("ingrese un numero");
-		numero=parseInt(numero)
+		numero=parseInt(numero);
 
 		if (numero>0) 
 		{
-			acumulador+=numero
-			positivo++
+			acumulador+=numero;
+			positivo++;
+			
+
 		}
 			else 
 			{
-			acumulador2+=numero
-			negativo++
+			acumulador2+=numero;
+			negativo++;
 			
 				if (numero==0)
 				{
-					contadorc++
+					contadorc++;
 				}
 			}
-	if(numero%0)
+	if(numero%2==0)
 	{
-		contadorPares++
+		contadorPares++;
 	}
 		respuesta=confirm("¿Quiere seguir?")
 	}

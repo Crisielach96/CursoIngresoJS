@@ -2,11 +2,11 @@ function Mostrar()
 {
 
 	// declarar variables
-	var min
-	var max
-	var num
+	var min;
+	var max;
+	var num;
 	var respuesta=true;
-	var primera=true
+	var primera=true;
 
 	while(respuesta)
 	{
@@ -15,26 +15,26 @@ function Mostrar()
 		
 		if (primera)
 		{
-			max=num
-			min=num
-			primera=false
+			max=num;
+			min=num;
+			primera=false;
 		}
 			else
 			{
 				if (num>max) 
 				{
-					max=num
+					max=num;
 				}
 					if (num<min)
 					{
-		 				min=num
+		 				min=num;
 		 			}
 			}		
 		respuesta=confirm("¿Quiere seguir?")
 	}
 
-document.getElementById('minimo').value=min
-document.getElementById("maximo").value=max
+document.getElementById('minimo').value=min;
+document.getElementById("maximo").value=max;
 
 
 
